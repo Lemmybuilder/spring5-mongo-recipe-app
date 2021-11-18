@@ -38,11 +38,13 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     public void onApplicationEvent(ContextRefreshedEvent event) {
         loadCategories();
         loadUom();
+        recipeRepository.deleteAll();
         recipeRepository.saveAll(getRecipes());
         log.debug("Loading Bootstrap Data");
     }
 
     private void loadCategories(){
+        categoryRepository.deleteAll();;
         Category cat1 = new Category();
         cat1.setDescription("American");
         categoryRepository.save(cat1);
@@ -61,6 +63,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     }
 
     private void loadUom(){
+        unitOfMeasureRepository.deleteAll();
         UnitOfMeasure uom1 = new UnitOfMeasure();
         uom1.setDescription("Teaspoon");
         unitOfMeasureRepository.save(uom1);
