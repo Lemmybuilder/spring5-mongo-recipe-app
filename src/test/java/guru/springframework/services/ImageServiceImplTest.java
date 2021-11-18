@@ -1,7 +1,8 @@
 package guru.springframework.services;
 
 import guru.springframework.domain.Recipe;
-import guru.springframework.repositories.RecipeRepository;
+import guru.springframework.repositories.primary.RecipeRepository;
+import guru.springframework.repositories.secondary.ReadOnlyRecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -19,7 +20,7 @@ import static org.mockito.Mockito.*;
 public class ImageServiceImplTest {
 
     @Mock
-    RecipeRepository recipeRepository;
+    ReadOnlyRecipeRepository recipeRepository;
 
     ImageService imageService;
 

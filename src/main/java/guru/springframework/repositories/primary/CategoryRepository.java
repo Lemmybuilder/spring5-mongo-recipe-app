@@ -1,4 +1,4 @@
-package guru.springframework.repositories;
+package guru.springframework.repositories.primary;
 
 import guru.springframework.domain.Category;
 import org.springframework.data.repository.CrudRepository;

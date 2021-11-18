@@ -1,4 +1,4 @@
-package guru.springframework.repositories;
+package guru.springframework.repositories.secondary;
 
 import guru.springframework.domain.Recipe;
 import org.springframework.data.repository.CrudRepository;
@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by jt on 6/13/17.
  */
-public interface RecipeRepository extends CrudRepository<Recipe, String> {
+public interface ReadOnlyRecipeRepository extends CrudRepository<Recipe, String> {
 }

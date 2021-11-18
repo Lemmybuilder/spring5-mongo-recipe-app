@@ -2,7 +2,7 @@ package guru.springframework.services;
 
 import guru.springframework.commands.UnitOfMeasureCommand;
 import guru.springframework.converters.UnitOfMeasureToUnitOfMeasureCommand;
-import guru.springframework.repositories.UnitOfMeasureRepository;
+import guru.springframework.repositories.primary.UnitOfMeasureRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

@@ -1,7 +1,8 @@
 package guru.springframework.services;
 
 import guru.springframework.domain.Recipe;
-import guru.springframework.repositories.RecipeRepository;
+import guru.springframework.repositories.primary.RecipeRepository;
+import guru.springframework.repositories.secondary.ReadOnlyRecipeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,9 +18,9 @@ import java.io.IOException;
 public class ImageServiceImpl implements ImageService {
 
 
-    private final RecipeRepository recipeRepository;
+    private final ReadOnlyRecipeRepository recipeRepository;
 
-    public ImageServiceImpl( RecipeRepository recipeService) {
+    public ImageServiceImpl( ReadOnlyRecipeRepository recipeService) {
 
         this.recipeRepository = recipeService;
     }
